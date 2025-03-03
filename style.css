@@ -23,6 +23,12 @@ p {
     font-size: 1.05vw;
 }
 
+hr {
+    border: 1px solid black;
+    width: 40%;
+    margin-left: 0;
+}
+
 header {
     display: flex;
     margin-bottom: 10px;
@@ -79,7 +85,7 @@ article {
     }
 }
 
-.links:last-child {
+.column:last-child {
     border-right: none; /* Remove border on the last column */
 }
 

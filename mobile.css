@@ -7,7 +7,6 @@
         padding-top: 20px;
         min-height: 100vh; /* Ensures it covers the whole screen */
         background-attachment: fixed; /* Keeps the gradient fixed while scrolling */
-        overflow-x: hidden;
     }
 
     h1 {
@@ -20,6 +19,12 @@
 
     p {
         font-size: 3vw;
+    }
+
+    hr {
+        border: 1px solid black;
+        width: 100%;
+        margin-left: 0;
     }
 
     header {
@@ -64,6 +69,10 @@
     }
 
     .wrapper {
+        width: 95%;
+    }
+
+    aside {
         width: 95%;
     }
 }
