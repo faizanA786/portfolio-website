@@ -6,7 +6,7 @@
     <title>Add Blog</title>
     <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="blogEntry.css">
+    <link rel="stylesheet" href="addEntry.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
