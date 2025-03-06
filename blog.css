@@ -53,3 +53,41 @@ header {
     justify-content: center;
     width: 70%;
 }
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;  /* Stack the elements vertically */
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 20px;
+        min-height: 100vh; /* Ensures it covers the whole screen */
+        background-attachment: fixed; /* Keeps the gradient fixed while scrolling */
+    }
+
+    h1 {
+        font-size: 5vw; /* Scale down font size on mobile */
+    }
+
+    h2 {
+        font-size: 4.5vw;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+
+    hr {
+        border: 1px solid black;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    header {
+        width: 100%;  /* Full width on mobile */
+        margin-bottom: 10px;
+    }
+
+    .wrapper {
+        width: 95%;
+    }
+}

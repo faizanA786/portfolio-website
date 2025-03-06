@@ -56,8 +56,21 @@ article {
 
 .education{
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); 
+    width: 60%;
+    margin: 0 auto;
+    gap: 40px;
+    img {
+        border-bottom: 4px solid black;
+        width: 100%;
+        height: 50%;
+        margin-bottom: 10px;
+    }
+}
+
+.desc {
+    position: relative;
+    padding: 10px;
 }
 
 .work {
@@ -89,10 +102,13 @@ article {
 }
 
 .column {
-    padding: 20px;
     text-align: center;
     border: 3px solid black;
     border-radius: 4px;
+    height: 100%;
+    img {
+        height: 45%;
+    }
 }
 
 .wrapper {
@@ -145,15 +161,12 @@ article {
     .education{
         grid-template-columns: 1fr;
         margin: 0 auto;
+        width: 95%;
     }
 
     .column {
         width: 95%; /* Full width for each column */
         border-bottom: 3px solid black; /* Add border at the bottom instead of right */
-        padding: 10px;  /* Less padding on mobile */
-        img {
-            width: 15%;
-        }
     }
 
     .wrapper {

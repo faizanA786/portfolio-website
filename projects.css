@@ -101,7 +101,7 @@ article {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 80%;
 }
 
 @media (max-width: 768px) {
@@ -128,7 +128,7 @@ article {
     }
 
     p {
-        font-size: 3vw;
+        font-size: 4vw;
     }
     
     .projects {
