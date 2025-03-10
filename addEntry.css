@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url("fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+body {
+    font-family: 'OpenSans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #a2c2e6, #ffffff); 
+    background-attachment: fixed; 
+}
+
+/* --------------- font sizes ----------------- */
+h1 {
+    font-size: 2vw;
+}
+
+h2 {
+    font-size: 1.5vw;
+}
+
+p {
+    font-size: 1.05vw;
+}
+/* --------------- END font sizes ----------------- */
+
+
+/* -------------------- Header styles ------------------- */
+header {
+    display: flex;
+    margin-bottom: 1.875rem;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.reader ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1.25rem;
+    padding: 0;
+}
+
+.reader p {
+    font-size: 1.25rem;
+}
+/* -------------------- END Header styles ------------------- */
+
+aside { /* form parent container */
+    width: 60%;
+}
+
+/* ------------------------- Login styles -------------------- */
+form {
+    text-align: center;
+    border: 0.125rem solid black;
+    border-radius: 0.25rem;
+    padding: 1.25rem;
+}
+
+form h1 {
+    margin-bottom: 0.625rem;
+}
+
+input{
+    font-size: 1rem;
+    padding: 0.625rem;
+    margin-bottom: 1.25rem;
+    width: 90%;
+    border: none;
+    resize: none;
+}
+
+textarea {
+    font-size: 1rem;
+    font-family: 'OpenSans';
+    border: none;
+    resize: none;
+    margin-bottom: 1.25rem;
+    padding: 0.625rem;
+    width: 90%;
+    height: 9rem;
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    margin: 0 auto;
+    display: block;
+    width: 40%;
+    margin-bottom: 1.25rem;
+    border: none;
+    background-color: white;
+}
+
+/* ------------------------- END Login styles -------------------- */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    min-height: 80vh;
+}
+
+/* --------------------------------- MOBILE view -------------------------- */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;  
+        text-align: center;
+        margin: 0;
+        min-height: 100vh; 
+    }
+
+    h1 {
+        font-size: 5vw; 
+    }
+
+    h2 {
+        font-size: 4.5vw;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+
+    header {
+        width: 100%;  
+    }
+
+    .reader p {
+        font-size: 3vw;
+    }
+
+    .wrapper {
+        width: 95%;
+    }
+
+    aside {
+        width: 95%;
+    }
+}

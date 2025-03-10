@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url("fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+body {
+    font-family: 'OpenSans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #a2c2e6, #ffffff); 
+    background-attachment: fixed;
+}
+
+/* ------------------------- Font sizes -------------------------- */
+
+h1 {
+    font-size: 2vw;
+    margin-bottom: 0.625rem;
+}
+
+h2 {
+    font-size: 1.5vw;
+}
+
+p {
+    font-size: 1.05vw;
+}
+
+/* ------------------------- END Font sizes -------------------------- */
+
+/* -------------------- Header style -------------------- */
+
+header {
+    display: flex;
+    margin-top: 0.625rem;
+    margin-bottom: 1.25rem;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.reader ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1.25rem;
+    padding: 0; /* remove space added by bullet points */
+}
+
+.reader p {
+    font-size: 1.25rem;
+}
+
+/* -------------------- END Header style -------------------- */
+
+/* -------------------- Personal profile style -------------------- */
+
+article {
+    display: flex;
+    align-items: center;
+    gap: 0.5625rem;
+    flex-wrap: wrap;
+}
+
+.aboutme {
+    max-width: 60%;
+    flex: 1; /* allow to grow/shrink if needs be */
+}
+
+.portrait {
+    width: 40%;
+}
+
+.portrait img{
+    width: 100%;
+    border-radius: 0.625rem;
+    flex-shrink: 0;
+}
+
+hr {
+    border: 0.0625rem solid black;
+    width: 40%;
+    margin-left: 0;
+}
+
+/* -------------------- END Personal profile style -------------------- */
+
+/* -------------------- Contacts style -------------------- */
+
+.links {
+    display: grid;
+    margin-top: 1.875rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.625rem;
+}
+
+.column {
+    padding: 1.25rem;
+    text-align: center;
+    border-right: 0.0625rem solid black;
+    img {
+        width: 25%;
+        margin-bottom: 1.25rem;
+        border-radius: 0.5rem;
+    }
+}
+
+.column:last-child {
+    border-right: none; /* remove border on the last column */
+}
+
+/* -------------------- END Contacts style -------------------- */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+
+/* ----------------------------- MOBILE view ---------------------------- */
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;  /* stack the elements vertically */
+        text-align: center;
+        margin: 0 auto; /* centre */
+        padding-top: 1.25rem;
+        min-height: 100vh; /* ensures it covers the whole screen */
+    }
+
+    h1 {
+        font-size: 5vw; /* scale down font size on mobile */
+    }
+
+    h2 {
+        font-size: 4.5vw;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+
+    hr {
+        border: 0.065rem solid black;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    header {
+        width: 100%;  /* full width on mobile */
+        margin-bottom: 0.625rem;
+    }
+
+    .reader p {
+        font-size: 3vw;
+    }
+
+    article {
+        justify-content: center;
+    }
+
+    .portrait {
+        width: 100%; /* make the portrait full width */
+    }
+
+    .portrait img {
+        width: 70%; /* slightly smaller image on mobile */
+        margin-bottom: 1.25rem;
+    }
+
+    .aboutme {
+        max-width: 90%; /* allow more space for text */
+    }
+
+    .links {
+        grid-template-columns: 1fr; /* stack columns vertically on mobile */
+        width: 100%;
+    }
+
+    .column {
+        width: 100%; /* full width for each column */
+        border-right: none;  
+        border-bottom: 0.0625rem solid black; /* add border at the bottom instead of right */
+        padding: 0.9375rem;  /* less padding on mobile */
+        img {
+            width: 15%;
+        }
+    }
+
+    .links:last-child {
+        border-bottom: none; /* remove the border from the last column */
+    }
+
+    .wrapper {
+        width: 95%;
+    }
+}

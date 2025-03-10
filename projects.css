@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url("fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+body {
+    font-family: 'OpenSans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #a2c2e6, #ffffff); 
+    background-attachment: fixed; /* Keeps the gradient fixed while scrolling */
+}
+
+/* ----------------- font sizes ------------- */
+
+h1 {
+    font-size: 2vw;
+    margin-bottom: 0.625rem;
+}
+
+h2 {
+    font-size: 1.5vw;
+}
+
+p {
+    font-size: 1.05vw;
+}
+
+/* ----------------- END font sizes ------------- */
+
+/* ----------------- header styles ----------------- */
+header {
+    display: flex;
+    margin-top: 0.625rem;
+    margin-bottom: 2.5rem;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.reader ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1.25rem;
+    padding: 0;
+}
+
+.reader p {
+    font-size: 1.25rem;
+}
+/* ----------------- END header styles ----------------- */
+
+/* ------------------ Projects layout styles ----------------- */
+article {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.875rem;
+    grid-auto-rows: 1fr; /* ensures all rows have equal height */
+}
+/* ------------------ Projects layout styles ----------------- */
+
+/* --------------------- Project column styles ---------------- */
+.column {
+    text-align: center;
+    border: 0.1875rem solid black;
+    border-radius: 0.25rem;
+    img {
+        border-bottom: 0.25rem solid black;
+        width: 100%;
+        height: 35%;
+        margin-bottom: 0.625rem; /* slim border to seperate image and desc */
+    }
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    img {
+        width: 8%;
+        margin: 0;
+        border-bottom: none; /* no border for mini icons showcasing tech used */
+    }
+}
+
+.desc {
+    padding: 0.625rem;
+    img {
+        width: 15%;
+        margin-top: 0.625rem;
+        border-bottom: none; /* affiliate links no slim border at bottom */
+        border-radius: 1rem;
+        padding: 0.625rem;
+    }
+}
+/* --------------------- END Project column styles ---------------- */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+/* ----------------------- MOBILE view -------------------- */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;  /* stack the elements vertically */
+        text-align: center;
+        margin: 0;
+        min-height: 100vh; /* ensures it covers the whole screen */
+    }
+
+    header {
+        width: 100%;  /* Full width on mobile */
+        margin-bottom: 0.625rem;
+    }
+
+    .reader p {
+        font-size: 3vw;
+    }
+
+    h1 {
+        font-size: 5vw; /* Scale down font size on mobile */
+    }
+
+    h2 {
+        font-size: 4.5vw;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+    
+    .projects {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+
+    .wrapper {
+        width: 95%;
+    }
+}

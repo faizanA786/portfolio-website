@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url("fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+body {
+    text-align: center;
+    font-family: 'OpenSans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #a2c2e6, #ffffff); /* Pink to orange gradient */
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 2vw;
+    margin-bottom: 0.625rem;
+}
+
+h2 {
+    font-size: 1.5vw;
+}
+
+p {
+    font-size: 1.05vw;
+}
+
+/* --------------------------- Blog styles -------------------------- */
+.blogs {
+    display: grid;
+    grid-template-rows: repeat(2, auto); /* creates 2 rows with height adjusting based off on items inside */
+    gap: 2.5rem;
+}
+
+.blogtitle {
+    display: flex;
+    flex-wrap: wrap; /* allow text to wrap properly */
+    gap: 0.625rem;
+    justify-content: space-between;
+}
+
+.date {
+    float: right;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    border: 0.1875rem solid black;
+    border-radius: 0.25rem;
+    padding: 1.25rem;
+    gap: 1.25rem;
+    text-align: left;
+}
+
+/* --------------------------- END Blog styles -------------------------- */
+
+header {
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.reader ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.reader p {
+    font-size: 1.25rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+/* -------------------------- MOBILE view --------------------- */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;  
+        text-align: center;
+        margin: 0 auto;
+        min-height: 100vh; 
+    }
+
+    h1 {
+        font-size: 5vw; 
+    }
+
+    h2 {
+        font-size: 4.5vw;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+
+    header {
+        width: 100%;  
+        margin-bottom: 0.625rem;
+    }
+
+    .reader p {
+        font-size: 3vw;
+    }
+
+    article {
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 1.25rem;
+    }
+
+    .wrapper {
+        width: 95%;
+    }
+}
