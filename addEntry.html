@@ -6,7 +6,7 @@
     <title>Faizan Ahmed</title>
     <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="addEntry.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -15,28 +15,26 @@
         <header>
             <nav class="reader">
                 <ul>
-                    <li><a href=""><p><u>Home</u></p></a></li>
+                    <li><a href="index.html"><p>Home</p></a></li>
                     <li><a href="about.html"><p>About Me</p></a></li>
                     <li><a href="experience.html"><p>Experience</p></a></li>
                     <li><a href="projects.html"><p>Projects</p></a></li>
                     <li><a href="viewBlog.html"><p>Blog</a></p></li>
+                    <li><a href=""><p><u>Logged In!</u></a></p></li>
                 </ul>
             </nav>
         </header>
 
-        <article>
-            <h1>Hi, Im Faizan!</h1>
-            <hr>
-
-            <section>
-                <h2>First year computer science student at Queen Mary.</h2>
-                <br>
-                <h2>Explore my portfolio showcasing my work history, programming projects and more.</h2>
-            </section>
-
-            <aside>
-                <a href="login.html"><h2>Login</h2></a>
-            </aside>
-        </article>
+        <aside>
+            <form action="addPost.php" method="post"> 
+                <h1>New Blog</h1>
+                <input type="text" id="title" name="title" placeholder="Blog Title..." required>
+                <textarea id="desc" name="desc" placeholder="Blog Description..." required></textarea>
+                <div class="action">
+                    <button type="submit"><h2>Post</h2></button>
+                    <button type="reset"><h2>Clear</h2></button>
+                </div>
+            </form> 
+        </aside>
     </div>
 </body>

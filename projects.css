@@ -12,9 +12,11 @@ body {
     background-attachment: fixed; /* Keeps the gradient fixed while scrolling */
 }
 
+/* ----------------- font sizes ------------- */
+
 h1 {
     font-size: 2vw;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 h2 {
@@ -25,51 +27,56 @@ p {
     font-size: 1.05vw;
 }
 
-hr {
-    border: 1px solid black;
-    width: 40%;
-    margin-left: 0;
-}
+/* ----------------- END font sizes ------------- */
 
+/* ----------------- header styles ----------------- */
 header {
     display: flex;
-    margin-top: 10px;
-    margin-bottom: 40px;
+    margin-top: 0.625rem;
+    margin-bottom: 2.5rem;
     width: 80%;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .reader ul{
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     padding: 0;
 }
 
+.reader p {
+    font-size: 1.25rem;
+}
+/* ----------------- END header styles ----------------- */
+
+/* ------------------ Projects layout styles ----------------- */
 article {
     text-align: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .projects{
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 30px;
-    grid-auto-rows: 1fr; /* Ensures all rows have equal height */
+    gap: 1.875rem;
+    grid-auto-rows: 1fr; /* ensures all rows have equal height */
 }
+/* ------------------ Projects layout styles ----------------- */
 
+/* --------------------- Project column styles ---------------- */
 .column {
     text-align: center;
-    border: 3px solid black;
-    border-radius: 4px;
+    border: 0.1875rem solid black;
+    border-radius: 0.25rem;
     img {
-        border-bottom: 4px solid black;
+        border-bottom: 0.25rem solid black;
         width: 100%;
         height: 35%;
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem; /* slim border to seperate image and desc */
     }
 }
 
@@ -77,24 +84,25 @@ article {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
     img {
         width: 8%;
         margin: 0;
-        border-bottom: none;
+        border-bottom: none; /* no border for mini icons showcasing tech used */
     }
 }
 
 .desc {
-    padding: 10px;
+    padding: 0.625rem;
     img {
         width: 15%;
-        margin-top: 10px;
-        border-bottom: none;
-        border-radius: 16px;
-        padding: 10px;
+        margin-top: 0.625rem;
+        border-bottom: none; /* affiliate links no slim border at bottom */
+        border-radius: 1rem;
+        padding: 0.625rem;
     }
 }
+/* --------------------- END Project column styles ---------------- */
 
 .wrapper {
     display: flex;
@@ -104,19 +112,22 @@ article {
     width: 80%;
 }
 
+/* ----------------------- MOBILE view -------------------- */
 @media (max-width: 768px) {
     body {
-        flex-direction: column;  /* Stack the elements vertically */
-        height: auto;  /* Remove the 100vh height */
+        flex-direction: column;  /* stack the elements vertically */
         text-align: center;
         margin: 0;
-        min-height: 100vh; /* Ensures it covers the whole screen */
-        background-attachment: fixed; /* Keeps the gradient fixed while scrolling */
+        min-height: 100vh; /* ensures it covers the whole screen */
     }
 
     header {
         width: 100%;  /* Full width on mobile */
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
+    }
+
+    .reader p {
+        font-size: 3vw;
     }
 
     h1 {
@@ -128,7 +139,7 @@ article {
     }
 
     p {
-        font-size: 4vw;
+        font-size: 3vw;
     }
     
     .projects {

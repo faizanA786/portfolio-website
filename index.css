@@ -6,15 +6,18 @@
 body {
     font-family: 'OpenSans';
     display: flex;
-    justify-content: center;
+    justify-content: center; /* by setting display to flex, i can vertically/horizontally centre everything inside body */
     align-items: center;
-    background: linear-gradient(to bottom, #a2c2e6, #ffffff); /* Pink to orange gradient */
+    flex-direction: column;
+    background: linear-gradient(to bottom, #a2c2e6, #ffffff); 
     background-attachment: fixed;
 }
 
+/* ------------------------- Font sizes -------------------------- */
+
 h1 {
-    font-size: 2vw;
-    margin-bottom: 10px;
+    font-size: 3vw;
+    margin-bottom: 0.625rem;
 }
 
 h2 {
@@ -25,71 +28,54 @@ p {
     font-size: 1.05vw;
 }
 
-hr {
-    border: 1px solid black;
-    width: 40%;
-    margin-left: 0;
-}
+/* ------------------------- END Font sizes -------------------------- */
+
+/* -------------------- Header style -------------------- */
 
 header {
     display: flex;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 0.625rem;
+    margin-bottom: 6rem;
     width: 80%;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .reader ul{
     list-style-type: none;
     display: flex;
-    gap: 20px;
-    padding: 0;
+    gap: 1.25rem;
+    padding: 0; /* remove space added by bullet points */
 }
+
+.reader p {
+    font-size: 1.25rem;
+}
+
+/* -------------------- END Header style -------------------- */
 
 article {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    flex-wrap: wrap;
-}
-
-.aboutme {
-    max-width: 60%;
-    flex: 1;
-}
-
-.portrait {
-    width: 40%;
-}
-
-.portrait img{
-    width: 100%;
-    border-radius: 10px;
-    flex-shrink: 0;
-}
-
-.links {
-    display: grid;
-    margin-top: 30px;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
-
-.column {
-    padding: 20px;
     text-align: center;
-    border-right: 1px solid black;
-    img {
-        width: 25%;
-        margin-bottom: 20px;
-        border-radius: 8px;
-    }
+    justify-content: center;
+    align-items: center;
 }
 
-.column:last-child {
-    border-right: none; /* Remove border on the last column */
+hr {
+    border: 0.0625rem solid black;
+    width: 50%;
+    margin-bottom: 1rem;
+}
+
+section {
+    margin-bottom: 6rem;
+}
+
+aside {
+    width: 10%;
+    margin: 0 auto;
+    border: 0.125rem solid black;
+    border-radius: 0.25rem;
 }
 
 .wrapper {
@@ -97,21 +83,19 @@ article {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 60%;
 }
 
 @media (max-width: 768px) {
     body {
-        flex-direction: column;  /* Stack the elements vertically */
+        flex-direction: column;  /* stack the elements vertically */
         text-align: center;
-        margin: 0 auto;
-        padding-top: 20px;
-        min-height: 100vh; /* Ensures it covers the whole screen */
-        background-attachment: fixed; /* Keeps the gradient fixed while scrolling */
+        margin: 0 auto; /* centre */
+        padding-top: 1.25rem;
     }
 
     h1 {
-        font-size: 5vw; /* Scale down font size on mobile */
+        font-size: 5vw; /* scale down font size on mobile */
     }
 
     h2 {
@@ -123,57 +107,31 @@ article {
     }
 
     hr {
-        border: 1px solid black;
+        border: 0.065rem solid black;
         width: 100%;
         margin-left: 0;
     }
 
     header {
-        width: 100%;  /* Full width on mobile */
-        margin-bottom: 10px;
+        width: 100%;  /* full width on mobile */
+        margin-bottom: 6rem;
+    }
+
+    .reader p {
+        font-size: 3vw;
     }
 
     article {
         justify-content: center;
+        width: 95%;
     }
 
-    .portrait {
-        width: 100%; /* Make the portrait full width */
-    }
-
-    .portrait img {
-        width: 70%; /* Slightly smaller image on mobile */
-        margin-bottom: 20px;
-    }
-
-    .aboutme {
-        max-width: 90%; /* Allow more space for text */
-    }
-
-    .links {
-        grid-template-columns: 1fr; /* Stack columns vertically on mobile */
-        width: 100%;
-    }
-
-    .column {
-        width: 100%; /* Full width for each column */
-        border-right: none;  /* Remove borders in mobile */
-        border-bottom: 1px solid black; /* Add border at the bottom instead of right */
-        padding: 15px;  /* Less padding on mobile */
-        img {
-            width: 15%;
-        }
-    }
-
-    .links:last-child {
-        border-bottom: none; /* Remove the border from the last column */
+    aside {
+        width: 50%;
     }
 
     .wrapper {
         width: 95%;
     }
 
-    aside {
-        width: 95%;
-    }
 }

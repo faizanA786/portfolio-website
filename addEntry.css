@@ -8,9 +8,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #a2c2e6, #ffffff); /* Pink to orange gradient */
+    background: linear-gradient(to bottom, #a2c2e6, #ffffff); 
+    background-attachment: fixed; 
 }
 
+/* --------------- font sizes ----------------- */
 h1 {
     font-size: 2vw;
 }
@@ -22,54 +24,82 @@ h2 {
 p {
     font-size: 1.05vw;
 }
+/* --------------- END font sizes ----------------- */
 
+
+/* -------------------- Header styles ------------------- */
 header {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     width: 80%;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .reader ul{
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     padding: 0;
 }
 
-aside {
-    width: 50%;
+.reader p {
+    font-size: 1.25rem;
+}
+/* -------------------- END Header styles ------------------- */
+
+aside { /* form parent container */
+    width: 60%;
 }
 
+/* ------------------------- Login styles -------------------- */
 form {
     text-align: center;
-    border: 2px solid black;
-    border-radius: 4px;
-    padding: 20px;
+    border: 0.125rem solid black;
+    border-radius: 0.25rem;
+    padding: 1.25rem;
 }
 
 form h1 {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
-input {
-    padding: 10px;
-    margin-bottom: 20px;
-    width: 70%;
+input{
+    font-size: 1rem;
+    padding: 0.625rem;
+    margin-bottom: 1.25rem;
+    width: 90%;
     border: none;
+    resize: none;
+}
+
+textarea {
+    font-size: 1rem;
+    font-family: 'OpenSans';
+    border: none;
+    resize: none;
+    margin-bottom: 1.25rem;
+    padding: 0.625rem;
+    width: 90%;
+    height: 9rem;
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
 }
 
 button {
     margin: 0 auto;
     display: block;
     width: 40%;
-    height: 40%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     border: none;
     background-color: white;
 }
+
+/* ------------------------- END Login styles -------------------- */
 
 .wrapper {
     display: flex;
@@ -77,21 +107,20 @@ button {
     align-items: center;
     justify-content: center;
     width: 70%;
-    height: 100vh;
+    min-height: 80vh;
 }
 
+/* --------------------------------- MOBILE view -------------------------- */
 @media (max-width: 768px) {
     body {
-        flex-direction: column;  /* Stack the elements vertically */
-        height: auto;  /* Remove the 100vh height */
+        flex-direction: column;  
         text-align: center;
         margin: 0;
-        min-height: 100vh; /* Ensures it covers the whole screen */
-        background-attachment: fixed; /* Keeps the gradient fixed while scrolling */
+        min-height: 100vh; 
     }
 
     h1 {
-        font-size: 5vw; /* Scale down font size on mobile */
+        font-size: 5vw; 
     }
 
     h2 {
@@ -103,7 +132,11 @@ button {
     }
 
     header {
-        width: 100%;  /* Full width on mobile */
+        width: 100%;  
+    }
+
+    .reader p {
+        font-size: 3vw;
     }
 
     .wrapper {
