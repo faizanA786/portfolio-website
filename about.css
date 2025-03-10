@@ -24,7 +24,7 @@ h2 {
 }
 
 p {
-    font-size: 1.05vw;
+    font-size: 1.15vw;
 }
 
 /* ------------------------- END Font sizes -------------------------- */
@@ -66,10 +66,11 @@ article {
 .aboutme {
     max-width: 60%;
     flex: 1; /* allow to grow/shrink if needs be */
+    align-items: center;
 }
 
 .portrait {
-    width: 40%;
+    width: 30%;
 }
 
 .portrait img{
@@ -93,6 +94,7 @@ hr {
     margin-top: 1.875rem;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.625rem;
+    margin-bottom: 1rem;
 }
 
 .column {
@@ -169,7 +171,7 @@ hr {
 
     .portrait img {
         width: 70%; /* slightly smaller image on mobile */
-        margin-bottom: 1.25rem;
+        margin-bottom: 0rem;
     }
 
     .aboutme {
@@ -178,14 +180,15 @@ hr {
 
     .links {
         grid-template-columns: 1fr; /* stack columns vertically on mobile */
-        width: 100%;
+        width: 95%;
+        margin: 0 auto;
     }
 
     .column {
-        width: 100%; /* full width for each column */
+        width: 95%; /* full width for each column */
         border-right: none;  
         border-bottom: 0.0625rem solid black; /* add border at the bottom instead of right */
-        padding: 0.9375rem;  /* less padding on mobile */
+        padding: 0.8rem;  /* less padding on mobile */
         img {
             width: 15%;
         }

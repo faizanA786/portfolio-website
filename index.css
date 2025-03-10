@@ -8,7 +8,6 @@ body {
     display: flex;
     justify-content: center; /* by setting display to flex, i can vertically/horizontally centre everything inside body */
     align-items: center;
-    flex-direction: column;
     background: linear-gradient(to bottom, #a2c2e6, #ffffff); 
     background-attachment: fixed;
 }
@@ -16,12 +15,12 @@ body {
 /* ------------------------- Font sizes -------------------------- */
 
 h1 {
-    font-size: 3vw;
+    font-size: 4vw;
     margin-bottom: 0.625rem;
 }
 
-h2 {
-    font-size: 1.5vw;
+h2, em {
+    font-size: 2vw;
 }
 
 p {
@@ -55,15 +54,18 @@ header {
 
 /* -------------------- END Header style -------------------- */
 
+
+/* -------------------- Landing page desc styles --------------------- */
 article {
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
 }
 
 hr {
     border: 0.0625rem solid black;
-    width: 50%;
+    width: 70%;
     margin-bottom: 1rem;
 }
 
@@ -72,11 +74,14 @@ section {
 }
 
 aside {
-    width: 10%;
+    background-color: white;
+    width: 12%;
     margin: 0 auto;
     border: 0.125rem solid black;
     border-radius: 0.25rem;
 }
+
+/* -------------------- END Landing page desc styles --------------------- */
 
 .wrapper {
     display: flex;

@@ -78,8 +78,10 @@ button {
     display: block;
     width: 40%;
     margin-bottom: 1.25rem;
+    border-radius: 1rem;
     border: none;
     background-color: white;
+    border: 0.08rem solid black;
 }
 
 /* ------------------------- END Login styles -------------------- */
