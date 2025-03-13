@@ -19,10 +19,10 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5vw;
+    font-size: 1.25vw;
 }
 
-p {
+p, em {
     font-size: 1.05vw;
 }
 
@@ -46,8 +46,9 @@ p {
 
 .row {
     display: flex;
+    background: #E6E6FA;   
     flex-direction: column;
-    border: 0.1875rem solid black;
+    border: 0.1875rem ridge #003366;
     border-radius: 0.25rem;
     padding: 1.25rem;
     gap: 1.25rem;
@@ -58,23 +59,24 @@ p {
 
 header {
     display: flex;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    width: 80%;
+    margin-top: 0.625rem;
+    margin-bottom: 2.5rem;
+    width: 40vw;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    background-color: #A7A2FF;
+    border-radius: 1.5rem;
 }
 
 .reader ul{
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 2rem;
     padding: 0;
 }
 
 .reader p {
-    font-size: 1.25rem;
+    font-size: 1.25vw;
 }
 
 .wrapper {
@@ -91,7 +93,7 @@ header {
         flex-direction: column;  
         text-align: center;
         margin: 0 auto;
-        min-height: 100vh; 
+        padding-top: 1.25rem;
     }
 
     h1 {
@@ -102,17 +104,19 @@ header {
         font-size: 4.5vw;
     }
 
-    p {
-        font-size: 3vw;
+    p, em {
+        font-size: 4vw;
     }
 
     header {
         width: 100%;  
-        margin-bottom: 0.625rem;
     }
 
     .reader p {
-        font-size: 3vw;
+        font-size: 3.5vw;
+        ul {
+            gap: 1.25rem;
+        }
     }
 
     article {

@@ -23,7 +23,7 @@ h2 {
     font-size: 1.5vw;
 }
 
-p {
+p, figcaption {
     font-size: 1.15vw;
 }
 
@@ -35,21 +35,22 @@ header {
     display: flex;
     margin-top: 0.625rem;
     margin-bottom: 1.25rem;
-    width: 80%;
+    width: 40vw;
     justify-content: center;
     align-items: center;
-    gap: 1.25rem;
+    background-color: #A7A2FF;
+    border-radius: 1.5rem;
 }
 
 .reader ul{
     list-style-type: none;
     display: flex;
-    gap: 1.25rem;
+    gap: 2rem;
     padding: 0; /* remove space added by bullet points */
 }
 
 .reader p {
-    font-size: 1.25rem;
+    font-size: 1.25vw;
 }
 
 /* -------------------- END Header style -------------------- */
@@ -93,7 +94,6 @@ hr {
     display: grid;
     margin-top: 1.875rem;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.625rem;
     margin-bottom: 1rem;
 }
 
@@ -135,15 +135,15 @@ hr {
     }
 
     h1 {
-        font-size: 5vw; /* scale down font size on mobile */
+        font-size: 6vw; /* scale down font size on mobile */
     }
 
     h2 {
         font-size: 4.5vw;
     }
 
-    p {
-        font-size: 3vw;
+    p, figcaption {
+        font-size: 4vw;
     }
 
     hr {
@@ -154,15 +154,18 @@ hr {
 
     header {
         width: 100%;  /* full width on mobile */
-        margin-bottom: 0.625rem;
     }
 
     .reader p {
-        font-size: 3vw;
+        font-size: 3.5vw;
+        ul{
+            gap: 1.25rem;
+        }
     }
 
     article {
         justify-content: center;
+        margin-bottom: 3rem;
     }
 
     .portrait {

@@ -23,7 +23,7 @@ h2 {
     font-size: 1.5vw;
 }
 
-p {
+p, .work {
     font-size: 1.05vw;
 }
 
@@ -34,21 +34,22 @@ header {
     display: flex;
     margin-top: 0.625rem;
     margin-bottom: 2.5rem;
-    width: 80%;
+    width: 40vw;
     justify-content: center;
     align-items: center;
-    gap: 1.25rem;
+    background-color: #A7A2FF;
+    border-radius: 1.5rem;
 }
 
 .reader ul{
     list-style-type: none;
     display: flex;
-    gap: 1.25rem;
+    gap: 2rem;
     padding: 0;
 }
 
 .reader p {
-    font-size: 1.25rem;
+    font-size: 1.25vw;
 }
 
 /* ------------------- END Header styles --------------------- */
@@ -69,8 +70,9 @@ article {
 
 .alevel, .university {
     text-align: center;
-    border: 0.1875rem solid black;
+    border: 0.1875rem solid #003366;
     border-radius: 0.25rem;
+    background: #E6E6FA;   
 }
 
 .university {
@@ -99,10 +101,9 @@ article {
 /* --------------------------- Work history styles -------------------------- */
 .work {
     display: grid;
-    border: 0.1875rem solid black;
+    border: 0.1875rem solid #003366;
     border-radius: 0.25rem;
     grid-template-rows: repeat(2, auto); /* creates 2 rows with height adjusting based off on items inside */
-    gap: 1.25rem;
 }
 
 .worktitle {
@@ -119,10 +120,15 @@ article {
 .row {
     display: flex;
     flex-direction: column;
-    border-bottom: 0.125rem solid black;
+    border-bottom: 0.1875rem double #003366;
     padding: 1.25rem;
     gap: 1.25rem;
     text-align: left;
+    background: #E6E6FA;   
+}
+
+.row:last-child {
+    border-bottom: none;
 }
 
 /* --------------------------- END Work history styles -------------------------- */
@@ -153,8 +159,8 @@ article {
         font-size: 4.5vw;
     }
 
-    p {
-        font-size: 3vw;
+    p, .row {
+        font-size: 4vw;
     }
 
     header {
@@ -162,7 +168,10 @@ article {
     }
 
     .reader p {
-        font-size: 3vw;
+        font-size: 3.5vw;
+        ul {
+            gap: 1.25rem;
+        }
     }
 
     article {

@@ -19,11 +19,11 @@ h1 {
     margin-bottom: 0.625rem;
 }
 
-h2, em {
+a, h2, em {
     font-size: 2vw;
 }
 
-p {
+p, footer {
     font-size: 1.05vw;
 }
 
@@ -35,21 +35,22 @@ header {
     display: flex;
     margin-top: 0.625rem;
     margin-bottom: 6rem;
-    width: 80%;
+    width: 40vw;
     justify-content: center;
     align-items: center;
-    gap: 1.25rem;
+    background-color: #A7A2FF;
+    border-radius: 1.5rem;
 }
 
 .reader ul{
     list-style-type: none;
     display: flex;
-    gap: 1.25rem;
+    gap: 2rem;
     padding: 0; /* remove space added by bullet points */
 }
 
 .reader p {
-    font-size: 1.25rem;
+    font-size: 1.25vw;
 }
 
 /* -------------------- END Header style -------------------- */
@@ -70,15 +71,17 @@ hr {
 }
 
 section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
     margin-bottom: 6rem;
 }
 
 aside {
-    background-color: white;
-    width: 12%;
+    background-color: #A7A2FF;  
+    width: 15%;
     margin: 0 auto;
-    border: 0.125rem solid black;
-    border-radius: 0.25rem;
+    border-radius: 2rem;
 }
 
 /* -------------------- END Landing page desc styles --------------------- */
@@ -88,7 +91,7 @@ aside {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 70%;
 }
 
 @media (max-width: 768px) {
@@ -100,15 +103,19 @@ aside {
     }
 
     h1 {
-        font-size: 5vw; /* scale down font size on mobile */
+        font-size: 7vw; 
     }
 
-    h2 {
+    h2, em {
         font-size: 4.5vw;
     }
 
-    p {
-        font-size: 3vw;
+    p, footer {
+        font-size: 3.5vw;
+    }
+
+    a {
+        font-size: 6vw;
     }
 
     hr {
@@ -123,7 +130,10 @@ aside {
     }
 
     .reader p {
-        font-size: 3vw;
+        font-size: 3.5vw;
+        ul {
+            gap: 1.25rem;
+        }
     }
 
     article {
@@ -131,8 +141,12 @@ aside {
         width: 95%;
     }
 
+    section {
+        gap: 2rem;
+    }
+
     aside {
-        width: 50%;
+        width: 25%;
     }
 
     .wrapper {
