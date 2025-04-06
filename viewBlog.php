@@ -5,8 +5,8 @@
     <meta name="author" content="Faizan Ahmed">
     <title>Faizan Ahmed</title>
     <link rel="icon" href="favicon.png">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="viewBlog.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/viewBlog.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -15,7 +15,7 @@
         <header>
             <nav class="reader">
                 <ul>
-                    <li><a href="index.html"><p>Home</p></a></li>
+                    <li><a href="index.php"><p>Home</p></a></li>
                     <li><a href="about.html"><p>About</p></a></li>
                     <li><a href="experience.html"><p>Experience</p></a></li>
                     <li><a href="projects.html"><p>Projects</p></a></li>
@@ -26,18 +26,19 @@
 
         <article>
             <h1>My Posts</h1>
+
             <section class="blogs">
                 <div class="row">
                     <div class="blogtitle">
                         <h2>Example Blog</h2>
-                        <em>28/11/24</em>
+                        <em>28/04/25, 13:24 UTC</em>
                     </div>
                     <p>Hello this is an example of my blog layout it will look something very similiar to this, (or similiar to the work history part in my experience page).</p>
                 </div>
                 <div class="row">
                     <div class="blogtitle">
-                        <h2>Example Blog 2</h2>
-                        <em>09/03/25</em>
+                        <h2>Rejected from every Spring Week - What I learned</h2>
+                        <em>28/04/25, 13:24 UTC</em>
                     </div>
                     <p>Second Blog.</p>
                 </div>

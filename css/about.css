@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'OpenSans';
-    src: url("fonts/OpenSans-VariableFont_wdth,wght.ttf");
+    src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
 
 body {
@@ -40,12 +40,17 @@ header {
     align-items: center;
     background-color: #A7A2FF;
     border-radius: 1.5rem;
+    li:last-child {
+        background-color: white;
+        box-shadow: 0 0 0 0.625rem white;        
+        border-radius: 1rem;
+    }
 }
 
 .reader ul{
     list-style-type: none;
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     padding: 0; /* remove space added by bullet points */
 }
 
@@ -68,6 +73,7 @@ article {
     max-width: 60%;
     flex: 1; /* allow to grow/shrink if needs be */
     align-items: center;
+    margin-bottom: 1.8rem;
 }
 
 .portrait {
@@ -158,9 +164,10 @@ hr {
 
     .reader p {
         font-size: 3.5vw;
-        ul{
-            gap: 1.25rem;
-        }
+    }
+
+    .reader ul {
+        gap: 1.25rem;
     }
 
     article {
@@ -179,6 +186,7 @@ hr {
 
     .aboutme {
         max-width: 90%; /* allow more space for text */
+        margin-bottom: 0;
     }
 
     .links {

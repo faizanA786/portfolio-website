@@ -5,8 +5,9 @@
     <meta name="author" content="Faizan Ahmed">
     <title>Faizan Ahmed</title>
     <link rel="icon" href="favicon.png">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <script src="js/projects.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -15,85 +16,88 @@
         <header>
             <nav class="reader">
                 <ul>
-                    <li><a href="index.html"><p>Home</p></a></li>
+                    <li><a href="index.php"><p>Home</p></a></li>
                     <li><a href="about.html"><p>About</p></a></li>
                     <li><a href="experience.html"><p>Experience</p></a></li>
                     <li><a href="projects.html"><p><u>Projects</u></p></a></li>
-                    <li><a href="viewBlog.html"><p>Blog</p></a></li>
+                    <li><a href="viewBlog.php"><p>Blog</p></a></li>
                 </ul>
             </nav>
         </header>
 
         <article>
-            <h1>Projects (5)</h1>
+            <h1>Featured Projects</h1>
             <section class="projects">
                 <div class="column">
-                    <img src="images/setlogic.png">
+                    <div class="uppercorner"><img id="1" src="images/fullscreen.png"></div>
+                    <img src="images/demo/setlogic.gif">
                     <div class="title">
                         <h2>Set Logic</h2>
                         <img src="images/java.png">
                     </div>
                     <div class="desc">
-                        <p>A work in progress <b>Java</b> program that deals with set operations such as the union, intersection or complement of two sets. A GUI and a set builder are planned.</p>
+                        <p><b>Java</b> utility that deals with set operations such as the union, intersection or complement of two sets. Can also build numerical sets and comes with a GUI built with <b>Swing</b>.</p>
                         <a href="https://github.com/faizanA786/set-logic" target="_blank"><img src="images/github.png"></a>
                     </div>
                 </div>  
 
                 <div class="column">
-                    <img src="images/blackjack.gif">
+                    <div class="uppercorner"><img id="2" src="images/fullscreen.png"></div>
+                    <img src="images/demo/blackjack.gif">
                     <div class="title">
                         <h2>Blackjack</h2>
                         <img src="images/python.webp">
                     </div>
                     <div class="desc">
-                        <p><b>Python</b> program that follows the procedural programming paradigm with <b>SQLite</b> integration for storing player stats and history. Featuring core blackjack mechanics like drawing cards, trump logic, and dealer AI, the game is designed for engaging solo play. A <b>Tkinter-based</b> GUI is also in place to enhance the user experience.</p>
+                        <p><b>Python</b> program that features mechanics like drawing cards, trump card logic and dealer behaviour. Adheres to the procedural programming paradigm and uses <b>SQLite</b> for storing player stats/history and <b>Tkinter</b> for the GUI. </p>
                         <a href="https://github.com/faizanA786/blackjack" target="_blank"><img src="images/github.png"></a>
                         <a href="https://pypi.org/project/21blackjack-gui/" target="_blank"><img src="images/python.webp"></a>
                     </div>
                 </div>  
 
                 <div class="column">
-                    <img src="images/redzombies.gif">
+                    <img src="images/demo/redzombies.gif">
                     <div class="title">
                         <h2>REDZOMBIES</h2>
                         <img src="images/csharp.png">
                         <img src="images/unity.png">
                     </div>
                     <div class="desc">
-                        <p>2D top-down wave-based shooter game as part of my A-level Computer Science coursework, inspired by the round-based zombies mode in Call of Duty. Built using <b>Unity</b> (2020) and <b>C#</b>, the game features stripped-down graphics and core mechanics such as differing weapons, wave progression, and resource management. </p>
+                        <p>Wave-based shooter featuring mechanics such as differing weapons, wave progression and a variety of enemies and an interactable environment, like clearing obstacles or placing traps. Heavily inspired by the round-based zombies mode in Call of Duty. Built using <b>Unity</b> (2020) and <b>C#</b>. </p>
                         <a href="https://github.com/faizanA786/redzombies-nea" target="_blank"><img src="images/github.png"></a>
                         <a href="https://outlaw-f.itch.io/red-zombies" target="_blank"><img src="images/itchio.png"></a>
                     </div>
-                </div>  
+                </div> 
+            </section>
 
+            <h1>Additional Projects (2)</h1>
+            <section class="projects">
                 <div class="column">
-                    <img src="images/sinisterweb.gif">
+                    <img src="images/demo/sinisterweb.gif">
                     <div class="title">
                         <h2>Sinister Web</h2>
                         <img src="images/godot.png">
                     </div>
                     <div class="desc">
-                        <p>A 2D top-down, click and point/multiple options horror-thriller inspired by the horrors of the dark web. This prototype was made using <b>Godot 4.0</b> and <b>GDscript</b>.</p>
+                        <p>Click and point, multiple options horror-thriller video game that's inspired by the horrors of the dark web. This prototype was made using <b>Godot 4.0</b> and <b>GDscript</b> and pixel art was done by myself.</p>
                         <a href="https://github.com/faizanA786/sinister-web" target="_blank"><img src="images/github.png"></a>
                         <a href="https://outlaw-f.itch.io/sinister-web" target="_blank"><img src="images/itchio.png"></a>
                     </div>
                 </div>  
 
                 <div class="column">
-                    <img src="images/minecraft.png">
+                    <img src="images/demo/minecraft.png">
                     <div class="title">
                         <h2>Minecraft Portfolio</h2>
                         <img src="images/html.png">
                         <img src="images/css.png">
                     </div>
                     <div class="desc">
-                        <p>I created a portfolio website to showcase my custom Minecraft datapacks. Built with <b>HTML</b> and <b>CSS</b>, the website highlights each datapack with detailed descriptions and their corresponding download links. It serves as a centralized hub for players to explore my creations and easily access them.</p>
+                        <p>A portfolio website designed to showcase my custom Minecraft datapacks. Built with <b>HTML</b> and <b>CSS</b>, the website highlights each datapack with detailed descriptions and their corresponding download links. It serves as a centralized hub for players to explore my creations and easily access them.</p>
                         <a href="https://github.com/faizanA786/mcdatapacks-portfolio" target="_blank"><img src="images/github.png"></a>
                         <a href="https://outlawf-datapacks.netlify.app/" target="_blank"><img src="images/website.png"></a>
                     </div>
-                </div>  
-
- 
+                </div>    
             </section>
         </article>
     </div>

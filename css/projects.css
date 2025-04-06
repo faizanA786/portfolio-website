@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'OpenSans';
-    src: url("fonts/OpenSans-VariableFont_wdth,wght.ttf");
+    src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
 
 body {
@@ -39,12 +39,17 @@ header {
     align-items: center;
     background-color: #A7A2FF;
     border-radius: 1.5rem;
+    li:last-child {
+        background-color: white;
+        box-shadow: 0 0 0 0.625rem white;        
+        border-radius: 1rem;
+    }
 }
 
 .reader ul{
     list-style-type: none;
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     padding: 0;
 }
 
@@ -65,20 +70,22 @@ article {
     grid-template-columns: repeat(3, 1fr); 
     gap: 1.875rem;
     grid-auto-rows: 1fr; /* ensures all rows have equal height */
+    margin-bottom: 2rem;
 }
 /* ------------------ Projects layout styles ----------------- */
 
 /* --------------------- Project column styles ---------------- */
 .column {
+    position: relative;
     background: #E6E6FA;
     text-align: center;
-    border: 0.1875rem solid #003366;
     border-radius: 0.25rem;
     img {
-        border-bottom: 0.25rem solid #003366;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
         width: 100%;
         height: 35%;
-        margin-bottom: 0.625rem; /* slim border to seperate image and desc */
+        margin-bottom: 0.625rem; 
     }
 }
 
@@ -91,6 +98,20 @@ article {
         width: 8%;
         margin: 0;
         border-bottom: none; /* no border for mini icons showcasing tech used */
+    }
+}
+
+.uppercorner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    margin: 0.25rem;
+    z-index: 1;
+    img {
+        cursor: pointer;
+        border-radius: 0.5rem;
+        border-bottom: none;
     }
 }
 
@@ -130,9 +151,10 @@ article {
 
     .reader p {
         font-size: 3.5vw;
-        ul {
-            gap: 1.25rem;
-        }
+    }
+
+    .reader ul {
+        gap: 1.25rem;
     }
 
     h1 {
@@ -151,6 +173,7 @@ article {
         grid-template-columns: 1fr;
         grid-auto-rows: auto;
         margin: 0 auto;
+        margin-bottom: 1rem;
     }
 
     .wrapper {
