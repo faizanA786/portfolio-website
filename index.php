@@ -36,7 +36,29 @@
             </figure>
 
             <aside>
-                <a href="login.html">Login</a>
+                <?php
+                session_start();
+
+                $servername = "127.0.0.1";
+                $username = "root";
+                $password = "";
+                $dbname = "admin";
+                
+                // Creates connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                
+                // Checks connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+                
+                if (isset($_SESSION['UserID'])) {
+                    echo "<a href='logout.php'>Logout</a>";
+                } 
+                else {
+                    echo "<a href='login.html'>Login</a>";
+                }
+                ?>
             </aside>
         </article>
 

@@ -125,6 +125,11 @@ article {
         padding: 0.625rem;
     }
 }
+
+.brief {
+    margin-left: 0.5rem;
+    text-align: left; 
+}
 /* --------------------- END Project column styles ---------------- */
 
 .wrapper {

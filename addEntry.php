@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +34,7 @@
             <form action="addPost.php" method="post"> 
                 <h1>New Blog</h1>
                 <input type="text" id="title" name="title" placeholder="Blog Title...">
-                <textarea id="desc" name="desc" placeholder="Blog Description..."></textarea>
+                <textarea id="description" name="description" placeholder="Blog Description..."></textarea>
                 <div class="action">
                     <button id="submit" type="submit"><h2>Post</h2></button>
                     <button id="reset" type="button"><h2>Clear</h2></button>
