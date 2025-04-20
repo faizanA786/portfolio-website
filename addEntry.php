@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +27,7 @@
         </header>
 
         <aside>
-            <form action="addPost.php" method="post"> 
+            <form action="preview.php" method="post"> 
                 <h1>New Blog</h1>
                 <input type="text" id="title" name="title" placeholder="Blog Title...">
                 <textarea id="description" name="description" placeholder="Blog Description..."></textarea>

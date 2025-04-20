@@ -5,7 +5,7 @@ function clearConfirm(event) {
 
 function clear(event) {
     document.getElementById("title").value = "";
-    document.getElementById("desc").value = "";
+    document.getElementById("description").value = "";
 
     let popup = document.getElementById("popup");
     popup.style.visibility = "hidden";
@@ -18,7 +18,7 @@ function cancel(event) {
 
 function checkFields(event) {
     let title = document.getElementById("title");
-    let desc = document.getElementById("desc");
+    let desc = document.getElementById("description");
 
     if (title.value.trim() === "" || desc.value.trim() === "") {
         event.preventDefault();

@@ -52,11 +52,33 @@ article {
     padding: 1.25rem;
     gap: 1.25rem;
     text-align: left;
-    width: 100%;
+    width: 95%;
 }
 
 .row p {
     word-break: break-word;
+}
+
+.hide {
+    display: none;
+}
+
+.prev-btn {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 10rem;
+    input {
+        font-size: 2vw;
+        background-color:#A7A2FF;
+        width: 16vw
+
+    }
+}
+
+.sort {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 /* --------------------------- END Blog styles -------------------------- */
@@ -132,6 +154,10 @@ header {
         gap: 1.25rem;
     }
 
+    .row {
+        width: 88%;
+    }
+
     article {
         justify-content: center;
         margin: 0 auto;
@@ -141,4 +167,14 @@ header {
     .wrapper {
         width: 95%;
     }
+
+    .prev-btn {
+        gap: 0.5rem;
+        input {
+            font-size: 5vw;
+            background-color:#A7A2FF;
+            width: 20vw;
+        }
+    }
+
 }

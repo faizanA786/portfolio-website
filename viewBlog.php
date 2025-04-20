@@ -27,6 +27,47 @@
         <article>
             <h1>My Posts</h1>
             <section class="blogs">
+                <div class="sort">
+                <?php
+                session_start();
+    
+                $servername = "127.0.0.1";
+                $username = "root";
+                $password = "";
+                $dbname = "admin";
+                
+                // Creates connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                
+                // Checks connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+                
+                if (isset($_SESSION['UserID'])) {
+                    echo "<a href='addEntry.php'><u>Add New Entry</u></a><br><br>";
+                } 
+                ?>
+                <form method="GET" action="">
+                    <label for="month">Filter:</label>
+                    <select name="month" id="month" onchange="this.form.submit()">
+                        <option value="">All Months</option>
+                        <?php
+                        $monthQuery = "SELECT DISTINCT DATE_FORMAT(datetime, '%Y-%m') AS ym FROM BLOGS ORDER BY ym DESC";
+                        $monthResult = $conn->query($monthQuery);
+                        $selectedMonth = $_GET['month'] ?? '';
+                
+                        while ($row = $monthResult->fetch_assoc()) {
+                            $val = $row['ym'];
+                            $label = DateTime::createFromFormat('Y-m', $val)->format('F Y');
+                            $selected = ($val == $selectedMonth) ? 'selected' : '';
+                            echo "<option value=\"$val\" $selected>$label</option>";
+                        }
+                        ?>
+                    </select>
+                </form>
+                </div>
+
             <?php
             // Database connection
             $servername = "127.0.0.1";
@@ -43,12 +84,20 @@
             }
 
             // Fetch blogs, latest first
-            $sql = "SELECT title, description, datetime FROM BLOGS ORDER BY datetime DESC";
-            $result = $conn->query($sql);
+            if ($selectedMonth !== '') {
+                $stmt = $conn->prepare("SELECT title, description, datetime FROM BLOGS WHERE DATE_FORMAT(datetime, '%Y-%m') = ? ORDER BY datetime DESC");
+                $stmt->bind_param("s", $selectedMonth);
+                $stmt->execute();
+                $result = $stmt->get_result();
+            } 
+            else {
+                $sql = "SELECT title, description, datetime FROM BLOGS ORDER BY datetime DESC";
+                $result = $conn->query($sql);
+            }
 
             while ($row = $result->fetch_assoc()) {
-                $dt = new DateTime($row['datetime']);
-                $formattedTime = $dt->format('jS F Y H:i');
+                $dt = new DateTime($row['datetime'], new DateTimeZone('UTC'));
+                $formattedTime = $dt->format('j F Y G:i') . ' UTC';
 
                 echo '<div class="row">';
                 echo '  <div class="blogtitle">';
