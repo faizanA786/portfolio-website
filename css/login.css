@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'OpenSans';
-    src: url("fonts/OpenSans-VariableFont_wdth,wght.ttf");
+    src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
 
 body {
@@ -17,11 +17,11 @@ h1 {
     font-size: 2vw;
 }
 
-h2 {
+button, h2 {
     font-size: 1.5vw;
 }
 
-p {
+p, input {
     font-size: 1.05vw;
 }
 /* --------------- END font sizes ----------------- */
@@ -30,22 +30,29 @@ p {
 /* -------------------- Header styles ------------------- */
 header {
     display: flex;
-    margin-bottom: 1.875rem;
-    width: 80%;
+    margin-top: 0.625rem;
+    margin-bottom: 4rem;
+    width: 40vw;
     justify-content: center;
     align-items: center;
-    gap: 1.25rem;
+    background-color: #A7A2FF;
+    border-radius: 1.5rem;
+    li:last-child {
+        background-color: white;
+        box-shadow: 0 0 0 0.625rem white;        
+        border-radius: 1rem;
+    }
 }
 
 .reader ul{
     list-style-type: none;
     display: flex;
-    gap: 1.25rem;
+    gap: 2.5rem;
     padding: 0;
 }
 
 .reader p {
-    font-size: 1.25rem;
+    font-size: 1.25vw;
 }
 /* -------------------- END Header styles ------------------- */
 
@@ -60,6 +67,7 @@ form {
     border: 0.125rem solid black;
     border-radius: 0.25rem;
     padding: 1.25rem;
+    background: #E6E6FA;   
 }
 
 form h1 {
@@ -78,8 +86,10 @@ button {
     display: block;
     width: 40%;
     margin-bottom: 1.25rem;
+    border-radius: 1rem;
     border: none;
     background-color: white;
+    border: 0.08rem solid black;
 }
 
 /* ------------------------- END Login styles -------------------- */
@@ -90,7 +100,6 @@ button {
     align-items: center;
     justify-content: center;
     width: 70%;
-    height: 80vh;
 }
 
 /* --------------------------------- MOBILE view -------------------------- */
@@ -99,27 +108,31 @@ button {
         flex-direction: column;  
         text-align: center;
         margin: 0;
-        min-height: 100vh; 
+        padding-top: 1.25rem; 
     }
 
     h1 {
         font-size: 5vw; 
     }
 
-    h2 {
+    button, h2 {
         font-size: 4.5vw;
     }
 
-    p {
-        font-size: 3vw;
+    p, input {
+        font-size: 4vw;
     }
 
     header {
-        width: 20%;  
+        width: 100%;  
     }
 
     .reader p {
-        font-size: 3vw;
+        font-size: 3.5vw;
+    }
+
+    .reader ul {
+        gap: 1.25rem;
     }
 
     .wrapper {

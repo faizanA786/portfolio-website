@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'OpenSans';
-    src: url("fonts/OpenSans-VariableFont_wdth,wght.ttf");
+    src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
 
 body {
@@ -34,21 +34,27 @@ header {
     display: flex;
     margin-top: 0.625rem;
     margin-bottom: 2.5rem;
-    width: 80%;
+    width: 40vw;
     justify-content: center;
     align-items: center;
-    gap: 1.25rem;
+    background-color: #A7A2FF;
+    border-radius: 1.5rem;
+    li:last-child {
+        background-color: white;
+        box-shadow: 0 0 0 0.625rem white;        
+        border-radius: 1rem;
+    }
 }
 
 .reader ul{
     list-style-type: none;
     display: flex;
-    gap: 1.25rem;
+    gap: 2.5rem;
     padding: 0;
 }
 
 .reader p {
-    font-size: 1.25rem;
+    font-size: 1.25vw;
 }
 /* ----------------- END header styles ----------------- */
 
@@ -64,19 +70,22 @@ article {
     grid-template-columns: repeat(3, 1fr); 
     gap: 1.875rem;
     grid-auto-rows: 1fr; /* ensures all rows have equal height */
+    margin-bottom: 2rem;
 }
 /* ------------------ Projects layout styles ----------------- */
 
 /* --------------------- Project column styles ---------------- */
 .column {
+    position: relative;
+    background: #E6E6FA;
     text-align: center;
-    border: 0.1875rem solid black;
     border-radius: 0.25rem;
     img {
-        border-bottom: 0.25rem solid black;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
         width: 100%;
         height: 35%;
-        margin-bottom: 0.625rem; /* slim border to seperate image and desc */
+        margin-bottom: 0.625rem; 
     }
 }
 
@@ -92,6 +101,20 @@ article {
     }
 }
 
+.uppercorner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    margin: 0.25rem;
+    z-index: 1;
+    img {
+        cursor: pointer;
+        border-radius: 0.5rem;
+        border-bottom: none;
+    }
+}
+
 .desc {
     padding: 0.625rem;
     img {
@@ -101,6 +124,11 @@ article {
         border-radius: 1rem;
         padding: 0.625rem;
     }
+}
+
+.brief {
+    margin-left: 0.5rem;
+    text-align: left; 
 }
 /* --------------------- END Project column styles ---------------- */
 
@@ -117,17 +145,21 @@ article {
     body {
         flex-direction: column;  /* stack the elements vertically */
         text-align: center;
-        margin: 0;
+        margin: 0 auto;
+        padding-top: 1.25rem;
         min-height: 100vh; /* ensures it covers the whole screen */
     }
 
     header {
         width: 100%;  /* Full width on mobile */
-        margin-bottom: 0.625rem;
     }
 
     .reader p {
-        font-size: 3vw;
+        font-size: 3.5vw;
+    }
+
+    .reader ul {
+        gap: 1.25rem;
     }
 
     h1 {
@@ -139,12 +171,14 @@ article {
     }
 
     p {
-        font-size: 3vw;
+        font-size: 4vw;
     }
     
     .projects {
         grid-template-columns: 1fr;
+        grid-auto-rows: auto;
         margin: 0 auto;
+        margin-bottom: 1rem;
     }
 
     .wrapper {

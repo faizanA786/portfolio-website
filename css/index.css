@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'OpenSans';
-    src: url("fonts/OpenSans-VariableFont_wdth,wght.ttf");
+    src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
 
 body {
@@ -8,7 +8,6 @@ body {
     display: flex;
     justify-content: center; /* by setting display to flex, i can vertically/horizontally centre everything inside body */
     align-items: center;
-    flex-direction: column;
     background: linear-gradient(to bottom, #a2c2e6, #ffffff); 
     background-attachment: fixed;
 }
@@ -20,11 +19,11 @@ h1 {
     margin-bottom: 0.625rem;
 }
 
-h2 {
-    font-size: 1.5vw;
+a, h2, em, p {
+    font-size: 2vw;
 }
 
-p {
+footer {
     font-size: 1.05vw;
 }
 
@@ -35,55 +34,79 @@ p {
 header {
     display: flex;
     margin-top: 0.625rem;
-    margin-bottom: 6rem;
-    width: 80%;
+    margin-bottom: 3rem;
+    width: 40vw;
     justify-content: center;
     align-items: center;
-    gap: 1.25rem;
+    background-color: #A7A2FF;
+    border-radius: 1.5rem;
+    li:last-child {
+        background-color: white;
+        box-shadow: 0 0 0 0.625rem white;        
+        border-radius: 1rem;
+    }
 }
 
 .reader ul{
     list-style-type: none;
     display: flex;
-    gap: 1.25rem;
+    gap: 2.5rem;
     padding: 0; /* remove space added by bullet points */
 }
 
 .reader p {
-    font-size: 1.25rem;
+    font-size: 1.25vw;
 }
 
 /* -------------------- END Header style -------------------- */
 
+
+/* -------------------- Landing page desc styles --------------------- */
 article {
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
 }
 
 hr {
     border: 0.0625rem solid black;
-    width: 50%;
+    width: 70%;
     margin-bottom: 1rem;
 }
 
 section {
-    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin-bottom: 2rem;
+}
+
+figure img {
+    border-radius: 1rem;
+    width: 60%;
+    margin-bottom: 2rem;
 }
 
 aside {
-    width: 10%;
+    background-color: #A7A2FF;  
+    width: 11%;
     margin: 0 auto;
-    border: 0.125rem solid black;
-    border-radius: 0.25rem;
+    border-radius: 2rem;
 }
+
+footer {
+    margin-bottom: 2rem;
+}
+
+/* -------------------- END Landing page desc styles --------------------- */
 
 .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 70%;
 }
 
 @media (max-width: 768px) {
@@ -95,15 +118,19 @@ aside {
     }
 
     h1 {
-        font-size: 5vw; /* scale down font size on mobile */
+        font-size: 10vw; 
     }
 
-    h2 {
-        font-size: 4.5vw;
+    p{
+        font-size: 6vw;
     }
 
-    p {
-        font-size: 3vw;
+    footer {
+        font-size: 3.5vw;
+    }
+
+    a {
+        font-size: 6vw;
     }
 
     hr {
@@ -118,7 +145,11 @@ aside {
     }
 
     .reader p {
-        font-size: 3vw;
+        font-size: 3.5vw;
+    }
+
+    .reader ul {
+        gap: 1.25rem;
     }
 
     article {
@@ -126,8 +157,16 @@ aside {
         width: 95%;
     }
 
+    section {
+        gap: 2rem;
+    }
+
+    figure img {
+        width: 100%;
+    }
+
     aside {
-        width: 50%;
+        width: 25%;
     }
 
     .wrapper {

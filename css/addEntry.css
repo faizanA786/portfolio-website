@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'OpenSans';
-    src: url("fonts/OpenSans-VariableFont_wdth,wght.ttf");
+    src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
 
 body {
@@ -21,7 +21,7 @@ h2 {
     font-size: 1.5vw;
 }
 
-p {
+p, input, textarea {
     font-size: 1.05vw;
 }
 /* --------------- END font sizes ----------------- */
@@ -30,22 +30,29 @@ p {
 /* -------------------- Header styles ------------------- */
 header {
     display: flex;
-    margin-bottom: 1.875rem;
-    width: 80%;
+    margin-top: 0.625rem;
+    margin-bottom: 3rem;
+    width: 40vw;
     justify-content: center;
     align-items: center;
-    gap: 1.25rem;
+    background-color: #A7A2FF;
+    border-radius: 1.5rem;
+    li:last-child {
+        background-color: white;
+        box-shadow: 0 0 0 0.625rem white;        
+        border-radius: 1rem;
+    }
 }
 
 .reader ul{
     list-style-type: none;
     display: flex;
-    gap: 1.25rem;
+    gap: 2.5rem;
     padding: 0;
 }
 
 .reader p {
-    font-size: 1.25rem;
+    font-size: 1.25vw;
 }
 /* -------------------- END Header styles ------------------- */
 
@@ -59,6 +66,7 @@ form {
     border: 0.125rem solid black;
     border-radius: 0.25rem;
     padding: 1.25rem;
+    background-color: #A7A2FF;
 }
 
 form h1 {
@@ -82,7 +90,7 @@ textarea {
     margin-bottom: 1.25rem;
     padding: 0.625rem;
     width: 90%;
-    height: 9rem;
+    height: 15rem;
 }
 
 .action {
@@ -95,11 +103,34 @@ button {
     display: block;
     width: 40%;
     margin-bottom: 1.25rem;
-    border: none;
+    border: 0.0625rem solid black;
+    border-radius: 0.625rem;
     background-color: white;
 }
 
 /* ------------------------- END Login styles -------------------- */
+
+/* ------------------------- Pop-up styles -------------------- */
+
+.popup {
+    visibility: hidden;
+    border: 0.25rem solid black;
+    background-color: cyan;
+    width: 20rem;
+    border-radius: 0.25rem;
+    position: absolute;
+}
+
+.children {
+    padding: 1rem;
+    .action {
+        margin-top: 2rem;
+    }
+}
+
+
+
+/* ------------------------- END Pop-up styles -------------------- */
 
 .wrapper {
     display: flex;
@@ -107,7 +138,6 @@ button {
     align-items: center;
     justify-content: center;
     width: 70%;
-    min-height: 80vh;
 }
 
 /* --------------------------------- MOBILE view -------------------------- */
@@ -116,19 +146,18 @@ button {
         flex-direction: column;  
         text-align: center;
         margin: 0;
-        min-height: 100vh; 
     }
 
     h1 {
-        font-size: 5vw; 
+        font-size: 7vw; 
     }
 
     h2 {
-        font-size: 4.5vw;
+        font-size: 5vw;
     }
 
     p {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     header {
@@ -136,7 +165,11 @@ button {
     }
 
     .reader p {
-        font-size: 3vw;
+        font-size: 5vw;
+    }
+
+    .reader ul {
+        gap: 1.25rem;
     }
 
     .wrapper {

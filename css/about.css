@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'OpenSans';
-    src: url("fonts/OpenSans-VariableFont_wdth,wght.ttf");
+    src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
 
 body {
@@ -23,8 +23,8 @@ h2 {
     font-size: 1.5vw;
 }
 
-p {
-    font-size: 1.05vw;
+p, figcaption {
+    font-size: 1.15vw;
 }
 
 /* ------------------------- END Font sizes -------------------------- */
@@ -35,21 +35,27 @@ header {
     display: flex;
     margin-top: 0.625rem;
     margin-bottom: 1.25rem;
-    width: 80%;
+    width: 40vw;
     justify-content: center;
     align-items: center;
-    gap: 1.25rem;
+    background-color: #A7A2FF;
+    border-radius: 1.5rem;
+    li:last-child {
+        background-color: white;
+        box-shadow: 0 0 0 0.625rem white;        
+        border-radius: 1rem;
+    }
 }
 
 .reader ul{
     list-style-type: none;
     display: flex;
-    gap: 1.25rem;
+    gap: 2.5rem;
     padding: 0; /* remove space added by bullet points */
 }
 
 .reader p {
-    font-size: 1.25rem;
+    font-size: 1.25vw;
 }
 
 /* -------------------- END Header style -------------------- */
@@ -66,10 +72,12 @@ article {
 .aboutme {
     max-width: 60%;
     flex: 1; /* allow to grow/shrink if needs be */
+    align-items: center;
+    margin-bottom: 1.8rem;
 }
 
 .portrait {
-    width: 40%;
+    width: 30%;
 }
 
 .portrait img{
@@ -92,7 +100,7 @@ hr {
     display: grid;
     margin-top: 1.875rem;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.625rem;
+    margin-bottom: 1rem;
 }
 
 .column {
@@ -133,15 +141,15 @@ hr {
     }
 
     h1 {
-        font-size: 5vw; /* scale down font size on mobile */
+        font-size: 6vw; /* scale down font size on mobile */
     }
 
     h2 {
         font-size: 4.5vw;
     }
 
-    p {
-        font-size: 3vw;
+    p, figcaption {
+        font-size: 4vw;
     }
 
     hr {
@@ -152,15 +160,19 @@ hr {
 
     header {
         width: 100%;  /* full width on mobile */
-        margin-bottom: 0.625rem;
     }
 
     .reader p {
-        font-size: 3vw;
+        font-size: 3.5vw;
+    }
+
+    .reader ul {
+        gap: 1.25rem;
     }
 
     article {
         justify-content: center;
+        margin-bottom: 3rem;
     }
 
     .portrait {
@@ -169,23 +181,25 @@ hr {
 
     .portrait img {
         width: 70%; /* slightly smaller image on mobile */
-        margin-bottom: 1.25rem;
+        margin-bottom: 0rem;
     }
 
     .aboutme {
         max-width: 90%; /* allow more space for text */
+        margin-bottom: 0;
     }
 
     .links {
         grid-template-columns: 1fr; /* stack columns vertically on mobile */
-        width: 100%;
+        width: 95%;
+        margin: 0 auto;
     }
 
     .column {
-        width: 100%; /* full width for each column */
+        width: 95%; /* full width for each column */
         border-right: none;  
         border-bottom: 0.0625rem solid black; /* add border at the bottom instead of right */
-        padding: 0.9375rem;  /* less padding on mobile */
+        padding: 0.8rem;  /* less padding on mobile */
         img {
             width: 15%;
         }
