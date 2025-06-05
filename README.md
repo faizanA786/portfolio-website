@@ -3,4 +3,4 @@ I developed and designed a personal portfolio website as part of my QMUL web tec
 
 ![Screenshot](https://i.imgur.com/IDEAwIq.png)
 
-https://faizana786.github.io/portfolio-website/
+https://faizan.uk/
