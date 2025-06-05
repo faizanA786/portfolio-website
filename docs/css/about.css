@@ -8,11 +8,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #a2c2e6, #ffffff); 
+    background: linear-gradient(to bottom, #1e1b4b, #1e3a8a);
     background-attachment: fixed;
+    color: #e0e0e0;
 }
 
 .fade-in {
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     opacity: 0;
     animation: fadeIn 1s ease-out forwards;
 }
@@ -46,14 +51,15 @@ header {
     display: flex;
     margin-top: 0.625rem;
     margin-bottom: 4vh;
-    width: 35vw;
+    width: 33vw;
+    background-color: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
     justify-content: center;
     align-items: center;
-    background-color: #A7A2FF;
     border-radius: 1.5rem;
     li:last-child {
-        background-color: white;
-        box-shadow: 0 0 0 0.625rem white;        
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0 0 0.625rem rgba(255, 255, 255, 0.4);        
         border-radius: 1rem;
     }
 }
@@ -65,7 +71,8 @@ header {
     padding: 0; /* remove space added by bullet points */
 }
 
-.reader p {
+.reader p, b, u {
+    color: #e0e0e0;
     font-size: 1.25vw;
 }
 
@@ -94,11 +101,11 @@ article {
 }
 
 .aboutme li {
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
 }
 
 .aboutme li::before {
-    content: "> ";
+    content: " ";
     font-weight: bold;
 }
 
@@ -113,7 +120,7 @@ article {
 }
 
 hr {
-    border: 0.0625rem solid black;
+    border: 0.0625rem solid #e0e0e0;
     width: 40%;
     margin-left: 0;
 }
@@ -126,15 +133,14 @@ hr {
     display: grid;
     margin-top: 1.875rem;
     grid-template-columns: repeat(4, 1fr);
-    margin-bottom: 1rem;
 }
 
 .column {
     padding: 1.25rem;
     text-align: center;
-    border-right: 0.0625rem solid black;
+    border-right: 0.0625rem solid #e0e0e0;
     img {
-        width: 25%;
+        width: 26%;
         margin-bottom: 1.25rem;
         border-radius: 0.5rem;
     }
@@ -152,8 +158,8 @@ hr {
     align-items: center;
     justify-content: center;
     width: 70%;
+    margin-bottom: 1vw;
 }
-
 
 /* ----------------------------- MOBILE view ---------------------------- */
 
@@ -174,7 +180,7 @@ hr {
         font-size: 4.5vw;
     }
 
-    li, p, figcaption {
+    li, p, figcaption, b {
         font-size: 4vw;
     }
 
@@ -193,7 +199,7 @@ hr {
     }
 
     .reader ul {
-        gap: 1.25rem;
+        gap: 2.5rem;
     }
 
     article {
@@ -224,14 +230,14 @@ hr {
     .column {
         width: 95%; /* full width for each column */
         border-right: none;  
-        border-bottom: 0.0625rem solid black; /* add border at the bottom instead of right */
+        border-bottom: 0.0625rem solid #e0e0e0; /* add border at the bottom instead of right */
         padding: 0.8rem;  /* less padding on mobile */
         img {
             width: 15%;
         }
     }
 
-    .links:last-child {
+    .column:last-child {
         border-bottom: none; /* remove the border from the last column */
     }
 

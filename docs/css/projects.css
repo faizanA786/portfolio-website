@@ -8,7 +8,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #a2c2e6, #ffffff); 
+    background: linear-gradient(to bottom, #1e1b4b, #1e3a8a);
+    color: #e0e0e0;
     background-attachment: fixed; /* Keeps the gradient fixed while scrolling */
 }
 
@@ -45,14 +46,15 @@ header {
     display: flex;
     margin-top: 0.625rem;
     margin-bottom: 2.5rem;
-    width: 35vw;
+    width: 33vw;
     justify-content: center;
     align-items: center;
-    background-color: #A7A2FF;
+    background-color: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
     border-radius: 1.5rem;
     li:last-child {
-        background-color: white;
-        box-shadow: 0 0 0 0.625rem white;        
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0 0 0.625rem rgba(255, 255, 255, 0.4);         
         border-radius: 1rem;
     }
 }
@@ -64,8 +66,9 @@ header {
     padding: 0;
 }
 
-.reader p {
+.reader p, b, u {
     font-size: 1.25vw;
+    color: #e0e0e0;
 }
 /* ----------------- END header styles ----------------- */
 
@@ -88,7 +91,7 @@ article {
 /* --------------------- Project column styles ---------------- */
 .column {
     position: relative;
-    background: #E6E6FA;
+    background-color: rgba(0,0,0,0.4);
     text-align: center;
     border-radius: 0.25rem;
     img {
@@ -170,7 +173,7 @@ article {
     }
 
     .reader ul {
-        gap: 1.25rem;
+        gap: 2.5rem;
     }
 
     h1 {
@@ -181,7 +184,7 @@ article {
         font-size: 4.5vw;
     }
 
-    p {
+    p, b ,u  {
         font-size: 4vw;
     }
     
