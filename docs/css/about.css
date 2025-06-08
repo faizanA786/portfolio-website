@@ -57,9 +57,9 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 1.5rem;
-    li:last-child {
-        background-color: rgba(255, 255, 255, 0.4);
-        box-shadow: 0 0 0 0.625rem rgba(255, 255, 255, 0.4);        
+    li:nth-child(1) {
+        background-color: rgba(255, 255, 255, 0.1);;
+        box-shadow: 0 0 0 0.625rem rgba(255, 255, 255, 0.1);        
         border-radius: 1rem;
     }
 }
@@ -119,9 +119,9 @@ article {
     flex-shrink: 0;
 }
 
-hr {
+.aboutme hr {
     border: 0.0625rem solid #e0e0e0;
-    width: 40%;
+    width: 25%;
     margin-left: 0;
 }
 
@@ -150,6 +150,25 @@ hr {
     border-right: none; /* remove border on the last column */
 }
 
+.column a {
+  display: inline-block;
+  padding: 6px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.column img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.column img:hover {
+    transform: scale(1.08);
+    filter: brightness(1.3);
+}
+
 /* -------------------- END Contacts style -------------------- */
 
 .wrapper {
@@ -158,6 +177,7 @@ hr {
     align-items: center;
     justify-content: center;
     width: 70%;
+    min-height: 80vh;
     margin-bottom: 1vw;
 }
 
@@ -184,8 +204,8 @@ hr {
         font-size: 4vw;
     }
 
-    hr {
-        border: 0.065rem solid black;
+    .aboutme hr {
+        border: 0.065rem solid #e0e0e0;
         width: 100%;
         margin-left: 0;
     }
@@ -202,9 +222,13 @@ hr {
         gap: 2.5rem;
     }
 
+    .fade-in {
+        padding-bottom: 0;
+    }
+
     article {
         justify-content: center;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
     }
 
     .portrait {
@@ -221,20 +245,36 @@ hr {
         margin-bottom: 0;
     }
 
+    .aboutme ul {
+        text-align: left;
+    }
+
+    .aboutme li::before {
+        content: " # ";
+        font-weight: bold;
+    }
+
     .links {
-        grid-template-columns: 1fr; /* stack columns vertically on mobile */
-        width: 95%;
-        margin: 0 auto;
+        grid-template-columns: 1fr;
     }
 
     .column {
-        width: 95%; /* full width for each column */
-        border-right: none;  
-        border-bottom: 0.0625rem solid #e0e0e0; /* add border at the bottom instead of right */
-        padding: 0.8rem;  /* less padding on mobile */
-        img {
-            width: 15%;
+        border-right: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        border-bottom: 0.0625rem solid #e0e0e0;
+        a {
+            width: 40%;
         }
+    }
+
+    .column img {
+        width: 40%;
+        padding: 0;
+        margin: 0;
+
     }
 
     .column:last-child {

@@ -52,9 +52,9 @@ header {
     background-color: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(10px);
     border-radius: 1.5rem;
-    li:last-child {
-        background-color: rgba(255, 255, 255, 0.4);
-        box-shadow: 0 0 0 0.625rem rgba(255, 255, 255, 0.4);        
+    li:nth-child(2) {
+        background-color: rgba(255, 255, 255, 0.1);;
+        box-shadow: 0 0 0 0.625rem rgba(255, 255, 255, 0.1);      
         border-radius: 1rem;
     }
 }
@@ -88,7 +88,6 @@ article {
 }
 
 .alevel, .university {
-    text-align: center;
     border-radius: 0.25rem;
     background-color: rgba(0,0,0,0.4);
 }
