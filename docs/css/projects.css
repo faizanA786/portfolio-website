@@ -51,7 +51,7 @@ header {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(10px);
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     li:nth-child(3) {
         background-color: rgba(255, 255, 255, 0.1);;
         box-shadow: 0 0 0 0.625rem rgba(255, 255, 255, 0.1);        
@@ -85,6 +85,9 @@ article {
     gap: 1.875rem;
     grid-auto-rows: 1fr; /* ensures all rows have equal height */
     margin-bottom: 2rem;
+    a {
+        color: cyan;
+    }
 }
 /* ------------------ Projects layout styles ----------------- */
 
@@ -126,6 +129,21 @@ article {
         cursor: pointer;
         border-radius: 0.5rem;
         border-bottom: none;
+    }
+}
+
+.freelance {
+    position: absolute;
+    top: 0;
+    right: 100;
+    width: 2rem;
+    margin: 1rem;
+    z-index: 1;
+    b {
+        color: #e0e0e0;
+        background-color: rgba(0, 0, 0, 0.8);;
+        box-shadow: 0 0 0 0.225rem rgba(0, 0, 0, 0.78);           
+        border-radius: 0.25rem;
     }
 }
 

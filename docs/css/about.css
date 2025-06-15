@@ -56,11 +56,11 @@ header {
     backdrop-filter: blur(10px);
     justify-content: center;
     align-items: center;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     li:nth-child(1) {
         background-color: rgba(255, 255, 255, 0.1);;
         box-shadow: 0 0 0 0.625rem rgba(255, 255, 255, 0.1);        
-        border-radius: 1rem;
+        border-radius: 2rem;
     }
 }
 

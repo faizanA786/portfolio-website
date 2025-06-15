@@ -51,11 +51,11 @@ header {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(10px);
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     li:nth-child(2) {
         background-color: rgba(255, 255, 255, 0.1);;
         box-shadow: 0 0 0 0.625rem rgba(255, 255, 255, 0.1);      
-        border-radius: 1rem;
+        border-radius: 2rem;
     }
 }
 
@@ -135,7 +135,7 @@ article {
 .row {
     display: flex;
     flex-direction: column;
-    border-bottom: 0.09875rem solid black;
+    border-bottom: 0.08rem solid #e0e0e0;
     padding: 1.25rem;
     gap: 1.25rem;
     text-align: left;
