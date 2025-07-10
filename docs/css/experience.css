@@ -54,15 +54,15 @@ header {
     border-radius: 1rem;
     li:nth-child(2) {
         background-color: rgba(255, 255, 255, 0.1);;
-        box-shadow: 0 0 0 0.625rem rgba(255, 255, 255, 0.1);      
-        border-radius: 2rem;
+        box-shadow: 0 0 0 0.425rem rgba(255, 255, 255, 0.1);      
+        border-radius: 0.2rem;
     }
 }
 
 .reader ul{
     list-style-type: none;
     display: flex;
-    gap: 3rem;
+    gap: 4vw;
     padding: 0;
 }
 
@@ -187,7 +187,7 @@ article {
     }
 
     .reader ul {
-        gap: 2.5rem;
+        gap: 12vw;
     }
 
     article {
