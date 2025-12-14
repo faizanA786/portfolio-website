@@ -15,7 +15,7 @@ body {
 
 .fade-in {
     background-color: rgba(0,0,0,0.4);
-    border-radius: 2rem;
+    border-radius: 1rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     opacity: 0;
@@ -215,6 +215,7 @@ article {
 
     header {
         width: 100%;  /* full width on mobile */
+        margin-bottom: 1rem;
     }
 
     .reader p {
